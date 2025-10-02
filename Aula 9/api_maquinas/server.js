@@ -1,19 +1,19 @@
 // arquivo que cria nossa api
 // importa as bibliotecas
 const express = require("express"); // importa a biblioteca express
-const mongoose = require(mongoose); // importa a biblioteca mongoose
+const mongoose = require("mongoose"); // importa a biblioteca mongoose
 
 const usuarioRoutes = require("./routes/usuario"); // importa a rota do usuário
 const maquinaRoutes = require("./routes/maquina"); // importa a rota maquina
 
 const app = express(); // cria a variável app para armazenar o express
-const PORTS = 4000;
+const PORT = 4000;
 
 // Middlewarepara interpretar o json
 app.use(express.json());
 
 // Conecta ao Mongo DB
-mongoose.connect("mondbd://localhost:27017db_api", {
+mongoose.connect("mondbd://localhost:27017/", {
     useNewUrlParser:true,
     useUnifiedTopology:true
 
@@ -24,6 +24,6 @@ app.use("/api/usuario",usuarioRoutes);
 app.use("/api/maquina",maquinaRoutes);
 
 // Inicia o servidor
-app.listen(PORTS,()=>{
+app.listen(PORT,()=>{
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

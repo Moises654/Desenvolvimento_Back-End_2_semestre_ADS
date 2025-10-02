@@ -4,7 +4,7 @@
 const mongoose = require("mongoose");
 
 // Cria a estrutura schema para o documento de usuário
-const UsuarioSchema = new mongoose.UsuarioSchema({
+const UsuarioSchema = new mongoose.Schema({
     nome: {type: String, required: true}, //  Campo nome, obrigatório e do tipo String
     email: {type: String, required: true} // Campo e-mail, obrigatório e do tipo String
 });

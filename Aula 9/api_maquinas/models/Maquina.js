@@ -7,7 +7,7 @@ const MaquinaSchema = new mongoose.Schema({
     tipo: {type: String, required: true}, // Tipo ex impressora, rotativa
     status:{type: String, required: true}, // status ativa, inativa, manutenção
     ultimaManutencao: {type: Date, required: true}, // última manutenção
-    proximaManutencao: {type: Date, required: True} // próxima manutenção
+    proximaManutencao: {type: Date, required: true} // próxima manutenção
 
 })
 
