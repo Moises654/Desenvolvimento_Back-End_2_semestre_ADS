@@ -11,7 +11,7 @@ const router = express.Router (); // pega a rota a partir da biblioteca Express
 router.post ("/", async (req,res)=>{
     try {
         const {nome, tipo, status, ultimaManutencao, proximaManutencao}=req.body; // armazena o corpo da requisição
-        const novaMaquina = await Maquina.create ({nome, tipo, status})
+        const novaMaquina = await Maquina.create ({nome, tipo, status, ultimaManutencao, proximaManutencao})
         res.status (201).json (novaMaquina);
     }catch(err){
         res.status(400).json({error:err.message});
