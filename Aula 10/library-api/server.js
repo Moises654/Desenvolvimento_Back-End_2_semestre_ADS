@@ -8,9 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 // Conexão ao MongoDB
-mongoose.connect('mongodb+srv://<usuario>:<senha>@cluster.mongodb.net/library', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+mongoose.connect("mongodb://localhost:27017/crudLibrary", {
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB conectado'))
 .catch(err => console.error('Erro ao conectar ao MongoDB:', err));
