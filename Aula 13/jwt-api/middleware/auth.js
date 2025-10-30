@@ -1,6 +1,6 @@
 // código de autenticação de middleware
 
-const jwt = require ("jsonwebtoker"); // importa a biblioteca jsonwebtoken
+const jwt = require ("jsonwebtoken"); // importa a biblioteca jsonwebtoken
 
 // cria a função para realizar a autenticação
 

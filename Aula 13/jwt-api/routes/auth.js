@@ -5,13 +5,13 @@ const bcrypt = require ("bcryptjs"); // biblioteca para criptografar a senha
 const jwt = require ("jsonwebtoken"); // autenticação json
 const {z} = require ("zod"); // biblioteca para realizar validação dos dados
 const User = require ("../models/User"); // importa o modelo de usuário
-const auth = require ("../midddleware/auth")
+const auth = require ("../middleware/auth")
 
 const router = express.Router ();
 
 // Schemas de validação
 
-const registerSchema = z.objeto ({
+const registerSchema = z.object ({
     name: z.string ().min(2),
     email: z.string ().email(),
     password: z.string ().min(6)
